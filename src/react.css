@@ -1,1 +1,305 @@
+/* ========================================
+   REACT CHEAT SHEET - COMPLETE CSS
+======================================== */
+
+.react-page {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 30px clamp(14px, 3vw, 42px) 100px;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    align-content: start;
+
+    background: #0b1020;
+    color: #e5e7eb;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ========================================
+   PAGE TITLE
+======================================== */
+
+.react-page>h1 {
+    grid-column: 1 / -1;
+    margin: 0;
+    padding: 12px 0 0;
+
+    color: #f8fafc;
+    text-align: center;
+    font-size: clamp(26px, 3vw, 38px);
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: -0.7px;
+}
+
+/* ========================================
+   SUBTITLE
+======================================== */
+
+.react-page>.subtitle {
+    grid-column: 1 / -1;
+    margin: -12px 0 8px;
+    padding-bottom: 20px;
+
+    color: #a7b3c8;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.7;
+
+    border-bottom: 1px solid #253047;
+}
+
+/* ========================================
+   CHEAT SHEET CARDS
+======================================== */
+
+.react-page>.card {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 22px;
+
+    display: flex;
+    flex-direction: column;
+    align-self: start;
+    gap: 14px;
+
+    color: #111827;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.20);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+/* Card hover effect */
+
+.react-page>.card:hover {
+    transform: translateY(-4px);
+    border-color: #10b981;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.28);
+}
+
+/* ========================================
+   CARD HEADINGS
+======================================== */
+
+.react-page .card h2 {
+    margin: 0 0 4px;
+    padding-bottom: 12px;
+
+    color: #111827;
+    font-size: 19px;
+    font-weight: 750;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+
+    border-bottom: 2px solid #e5e7eb;
+}
+
+/* ========================================
+   CODE BLOCKS
+======================================== */
+
+.react-page .card pre {
+    display: block;
+    box-sizing: border-box;
+
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 18px;
+
+    overflow-x: auto;
+    white-space: pre;
+    overflow-wrap: normal;
+    tab-size: 2;
+
+    color: #e6edf3;
+    background: #080d13;
+    border: 1px solid #263244;
+    border-radius: 11px;
+
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 12.5px;
+    line-height: 1.85;
+
+    scrollbar-width: thin;
+    scrollbar-color: #475569 #080d13;
+}
+
+/* Code scrollbar */
+
+.react-page .card pre::-webkit-scrollbar {
+    height: 7px;
+}
+
+.react-page .card pre::-webkit-scrollbar-track {
+    background: #080d13;
+}
+
+.react-page .card pre::-webkit-scrollbar-thumb {
+    background: #475569;
+    border-radius: 10px;
+}
+
+/* ========================================
+   DESCRIPTION / EXPLANATION
+======================================== */
+
+.react-page .card p {
+    margin: 0;
+    color: #475569;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.react-page .card p b {
+    color: #059669;
+}
+
+/* ========================================
+   LISTS
+======================================== */
+
+.react-page .card ul,
+.react-page .card ol {
+    margin: 0;
+    padding-left: 22px;
+
+    color: #374151;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.react-page .card li {
+    margin-bottom: 8px;
+    padding-left: 3px;
+}
+
+.react-page .card li::marker {
+    color: #10b981;
+}
+
+/* ========================================
+   IMPORTANT RULES CARD
+======================================== */
+
+.react-page>.card.important {
+    background: #f0fdf4;
+    border: 1px solid #86efac;
+    border-top: 4px solid #10b981;
+}
+
+.react-page .card.important h2 {
+    color: #065f46;
+    border-bottom-color: #bbf7d0;
+}
+
+.react-page .card.important li {
+    color: #166534;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.react-page>.footer {
+    grid-column: 1 / -1;
+    margin-top: 4px;
+    padding: 20px 16px;
+
+    color: #a7f3d0;
+    background: #111827;
+    border: 1px solid #263244;
+    border-radius: 12px;
+
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.8;
+    font-weight: 600;
+}
+
+/* ========================================
+   TABLET SCREEN
+======================================== */
+
+@media (max-width: 1050px) {
+    .react-page {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+        padding: 26px 22px 100px;
+    }
+
+    .react-page>.card {
+        padding: 19px;
+    }
+}
+
+/* ========================================
+   MOBILE SCREEN
+======================================== */
+
+@media (max-width: 620px) {
+    .react-page {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+        padding: 22px 12px 90px;
+    }
+
+    .react-page>h1,
+    .react-page>.subtitle,
+    .react-page>.footer {
+        grid-column: 1 / -1;
+    }
+
+    .react-page>h1 {
+        font-size: 27px;
+    }
+
+    .react-page>.subtitle {
+        font-size: 13px;
+        padding-bottom: 15px;
+    }
+
+    .react-page>.card {
+        padding: 17px;
+        border-radius: 13px;
+    }
+
+    .react-page .card h2 {
+        font-size: 18px;
+    }
+
+    .react-page .card pre {
+        padding: 14px;
+        font-size: 12px;
+        line-height: 1.8;
+    }
+}
+
+/* ========================================
+   REDUCED MOTION ACCESSIBILITY
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .react-page>.card {
+        transition: none;
+    }
+
+    .react-page>.card:hover {
+        transform: none;
+    }
+}
 
