@@ -1,0 +1,291 @@
+/* ================================
+   CSS CHEAT SHEET
+   ================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0a0f1f;
+    color: #ffffff;
+}
+
+/* Main Page */
+.css-cheatsheet {
+    width: 100%;
+    min-height: 100vh;
+    padding: 50px 7%;
+    background:
+        radial-gradient(circle at top left, #172554, transparent 35%),
+        radial-gradient(circle at bottom right, #1e1b4b, transparent 35%),
+        #0a0f1f;
+}
+
+/* Heading */
+.css-cheatsheet>h1 {
+    text-align: center;
+    font-size: 52px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    /* background: linear-gradient(90deg, #60a5fa, #a78bfa, #22d3ee); */
+    /* -webkit-text-fill-color: transparent; */
+}
+
+.subtitle {
+    text-align: center;
+    color: #9ca3af;
+    font-size: 17px;
+    margin-bottom: 50px;
+}
+
+/* Sections */
+.css-cheatsheet section {
+    max-width: 1100px;
+    margin: 0 auto 35px;
+    padding: 30px;
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.css-cheatsheet section:hover {
+    border-color: rgba(96, 165, 250, 0.25);
+}
+
+/* Section Heading */
+.css-cheatsheet section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #60a5fa;
+}
+
+/* Code Box */
+.code {
+    width: 100%;
+    margin: 15px 0;
+    padding: 20px;
+
+    background: #050816;
+    border: 1px solid #1f2937;
+    border-radius: 14px;
+
+    overflow-x: auto;
+}
+
+.code pre {
+    margin: 0;
+    color: #86efac;
+    font-family: "Courier New", monospace;
+    font-size: 15px;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+
+/* Scrollbar */
+.code::-webkit-scrollbar {
+    height: 7px;
+}
+
+.code::-webkit-scrollbar-track {
+    background: #111827;
+    border-radius: 20px;
+}
+
+.code::-webkit-scrollbar-thumb {
+    background: #374151;
+    border-radius: 20px;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+thead {
+    background: #1d4ed8;
+}
+
+th {
+    padding: 15px;
+    text-align: left;
+    font-size: 15px;
+}
+
+td {
+    padding: 15px;
+    color: #d1d5db;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+tbody tr {
+    background: rgba(255, 255, 255, 0.03);
+    transition: 0.25s ease;
+}
+
+tbody tr:hover {
+    background: rgba(96, 165, 250, 0.08);
+    transform: scale(1.005);
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Tags */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.tags span {
+    padding: 10px 16px;
+    border-radius: 50px;
+
+    background: rgba(96, 165, 250, 0.1);
+    border: 1px solid rgba(96, 165, 250, 0.3);
+
+    color: #93c5fd;
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+.tags span:hover {
+    background: #2563eb;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+}
+
+/* Footer */
+.css-cheatsheet footer {
+    max-width: 1100px;
+    margin: 50px auto 0;
+    padding: 30px;
+    text-align: center;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.css-cheatsheet footer h3 {
+    font-size: 24px;
+    margin-bottom: 8px;
+    color: #60a5fa;
+}
+
+.css-cheatsheet footer p {
+    color: #9ca3af;
+}
+
+/* Links / Code */
+code {
+    color: #86efac;
+    font-family: "Courier New", monospace;
+}
+
+/* ================================
+   RESPONSIVE
+   ================================ */
+
+/* Tablet */
+@media (max-width: 900px) {
+    .css-cheatsheet {
+        padding: 40px 4%;
+    }
+
+    .css-cheatsheet>h1 {
+        font-size: 42px;
+    }
+
+    .css-cheatsheet section {
+        padding: 25px;
+    }
+
+    .css-cheatsheet section h2 {
+        font-size: 24px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .css-cheatsheet {
+        padding: 30px 15px;
+    }
+
+    .css-cheatsheet>h1 {
+        font-size: 34px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 30px;
+    }
+
+    .css-cheatsheet section {
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 15px;
+    }
+
+    .css-cheatsheet section h2 {
+        font-size: 21px;
+    }
+
+    .code {
+        padding: 15px;
+    }
+
+    .code pre {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    th,
+    td {
+        padding: 12px;
+        font-size: 13px;
+    }
+
+    .tags span {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+}
+
+/* Very Small Mobile */
+@media (max-width: 400px) {
+    .css-cheatsheet>h1 {
+        font-size: 29px;
+    }
+
+    .css-cheatsheet section {
+        padding: 15px;
+    }
+
+    .code pre {
+        font-size: 12px;
+    }
+}

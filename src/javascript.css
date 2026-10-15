@@ -1,0 +1,276 @@
+/* =====================================
+   JAVASCRIPT CHEAT SHEET
+   Modern Dark + Neon Design
+===================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #070b14;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Main Cheat Sheet */
+.js-cheatsheet {
+    min-height: 100vh !important;
+    padding: 45px 20px 60px !important;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(0, 234, 255, 0.14),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            rgba(124, 92, 255, 0.14),
+            transparent 30%
+        ),
+        #070b14 !important;
+
+    color: white !important;
+}
+
+/* Main Heading */
+.js-cheatsheet h1 {
+    text-align: center !important;
+    font-size: 48px !important;
+    font-weight: 800 !important;
+    margin-bottom: 12px !important;
+
+    background: linear-gradient(
+        90deg,
+        #00eaff,
+        #7c5cff,
+        #ff4ecd
+    ) !important;
+
+background-clip: text !important;
+    -webkit-background-clip: text !important;
+
+    -webkit-text-fill-color: transparent !important;
+    text-shadow: 0 0 20px rgba(0, 234, 255, 0.15);
+}
+
+/* Subtitle */
+.js-cheatsheet > p {
+    text-align: center !important;
+    color: #9da8bd !important;
+    font-size: 17px !important;
+    margin-bottom: 40px !important;
+}
+
+/* Cards */
+.js-cheatsheet section {
+    width: min(1000px, 100%) !important;
+    margin: 0 auto 28px !important;
+    padding: 26px !important;
+
+    background: rgba(17, 24, 39, 0.92) !important;
+
+    border: 1px solid rgba(0, 234, 255, 0.16) !important;
+
+    border-radius: 18px !important;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.35),
+        inset 0 0 20px rgba(0, 234, 255, 0.03);
+
+    transition: all 0.3s ease;
+}
+
+/* Card Hover */
+.js-cheatsheet section:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(0, 234, 255, 0.55) !important;
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.5),
+        0 0 25px rgba(0, 234, 255, 0.08);
+}
+
+/* Section Heading */
+.js-cheatsheet section h2 {
+    color: #00eaff !important;
+
+    font-size: 24px !important;
+
+    margin-top: 0 !important;
+    margin-bottom: 18px !important;
+
+    padding-left: 12px !important;
+
+    border-left: 4px solid #00eaff !important;
+}
+
+/* Code Area */
+.js-cheatsheet pre {
+    width: 100% !important;
+
+    background: #050816 !important;
+
+    color: #d8faff !important;
+
+    padding: 20px !important;
+
+    border-radius: 12px !important;
+
+    border: 1px solid rgba(124, 92, 255, 0.28) !important;
+
+    font-family:
+        "Fira Code",
+        "Cascadia Code",
+        Consolas,
+        monospace !important;
+
+    font-size: 15px !important;
+
+    line-height: 1.8 !important;
+
+    overflow-x: auto !important;
+
+    white-space: pre-wrap !important;
+    word-break: break-word;
+
+    box-shadow:
+        inset 0 0 20px rgba(0, 234, 255, 0.025);
+}
+
+/* Code Hover */
+.js-cheatsheet pre:hover {
+    border-color: rgba(0, 234, 255, 0.5) !important;
+}
+
+/* Normal Paragraph */
+.js-cheatsheet section p {
+    color: #aeb9cc !important;
+
+    font-size: 15px !important;
+
+    line-height: 1.7;
+
+    margin-top: 10px;
+}
+
+/* Footer */
+.js-footer {
+    width: min(1000px, 100%) !important;
+
+    margin: 45px auto 0 !important;
+
+    padding: 25px !important;
+
+    text-align: center !important;
+
+    border-radius: 18px !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0, 234, 255, 0.07),
+            rgba(124, 92, 255, 0.08)
+        ) !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.js-footer h2 {
+    color: #00eaff !important;
+}
+
+.js-footer p {
+    color: #9da8bd !important;
+}
+
+/* Scrollbar */
+.js-cheatsheet pre::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.js-cheatsheet pre::-webkit-scrollbar-track {
+    background: #0b1020;
+}
+
+.js-cheatsheet pre::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+        180deg,
+        #00eaff,
+        #7c5cff
+    );
+
+    border-radius: 10px;
+}
+
+/* Selection */
+.js-cheatsheet ::selection {
+    background: #00eaff;
+    color: #050816;
+}
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 768px) {
+
+    .js-cheatsheet {
+        padding: 30px 14px 45px !important;
+    }
+
+    .js-cheatsheet h1 {
+        font-size: 36px !important;
+    }
+
+    .js-cheatsheet section {
+        padding: 18px !important;
+    }
+
+    .js-cheatsheet section h2 {
+        font-size: 21px !important;
+    }
+
+    .js-cheatsheet pre {
+        font-size: 13px !important;
+        padding: 15px !important;
+    }
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 480px) {
+
+    .js-cheatsheet {
+        padding: 22px 10px 35px !important;
+    }
+
+    .js-cheatsheet h1 {
+        font-size: 29px !important;
+    }
+
+    .js-cheatsheet > p {
+        font-size: 13px !important;
+    }
+
+    .js-cheatsheet section {
+        padding: 14px !important;
+        margin-bottom: 18px !important;
+    }
+
+    .js-cheatsheet section h2 {
+        font-size: 18px !important;
+    }
+
+    .js-cheatsheet pre {
+        font-size: 12px !important;
+        line-height: 1.7 !important;
+        padding: 13px !important;
+    }
+}
