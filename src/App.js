@@ -11,7 +11,7 @@ import Html from './html';
 import Css from './css';
 import Startlearning from './startlearning';
 import Javascript from './javascript';
-import React from './react';
+import ReactCheatSheet from './react';
 import Node from './node';
 import C from './c';
 import CPP from './cpp';
@@ -33,7 +33,7 @@ function App() {
         <Route path="/startlearning" element={<Startlearning />} />
         <Route path="/css" element={<Css />} />
         <Route path="/javascript" element={<Javascript />} />
-        <Route path="/react" element={<React />} />
+        <Route path="/react" element={<ReactCheatSheet />} />
         <Route path="/node" element={<Node />} />
         <Route path="/c" element={<C />} />
         <Route path="/cpp" element={<CPP />} />
