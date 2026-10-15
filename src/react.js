@@ -1,5 +1,5 @@
 import React, from "react";
-import "./react.css";
+
 
 const ReactCheatSheet = () => {
     return (
